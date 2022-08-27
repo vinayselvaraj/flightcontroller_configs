@@ -1,0 +1,84 @@
+# 
+
+# diff
+
+# version
+# Betaflight / STM32F745 (S745) 4.2.0 Jun 14 2020 / 03:05:04 (8f2d21460) MSP API: 1.43
+# config: manufacturer_id: HBRO, board_name: KAKUTEF7HDV, version: cc8e118f, date: 2020-03-04T02:37:20Z
+
+# start the command batch
+batch start
+
+board_name KAKUTEF7HDV
+manufacturer_id HBRO
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 5 0 115200 57600 0 115200
+serial 6 1024 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1300 1700 0 0
+aux 2 13 1 1700 2100 0 0
+aux 3 35 1 1700 2100 0 0
+
+# master
+set gyro_lowpass2_hz = 375
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 350
+set dyn_lpf_gyro_min_hz = 300
+set dyn_lpf_gyro_max_hz = 750
+set acc_calibration = -12,27,132,1
+set baro_hardware = NONE
+set serialrx_provider = CRSF
+set sbus_baud_fast = ON
+set blackbox_device = NONE
+set dshot_idle_value = 300
+set dshot_bidir = ON
+set bat_capacity = 1500
+set yaw_motors_reversed = ON
+set gyro_1_align_yaw = 2700
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dterm_lowpass2_hz = 225
+set vbat_sag_compensation = 100
+set p_pitch = 69
+set i_pitch = 135
+set d_pitch = 57
+set f_pitch = 143
+set p_roll = 63
+set i_roll = 128
+set d_roll = 53
+set f_roll = 135
+set p_yaw = 68
+set i_yaw = 135
+set f_yaw = 135
+set d_min_roll = 35
+set d_min_pitch = 38
+set ff_interpolate_sp = AVERAGED_4
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = ACTUAL
+set roll_rc_rate = 5
+set pitch_rc_rate = 5
+set yaw_rc_rate = 5
+set roll_expo = 54
+set pitch_expo = 54
+set yaw_expo = 54
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 60
+
+# end the command batch
+batch end
+
+# 
